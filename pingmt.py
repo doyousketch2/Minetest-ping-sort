@@ -19,9 +19,9 @@
 import json
 import urllib
 import operator
-from time import time
+import time
 from subprocess import Popen, PIPE
-begin  = time()
+begin  = time.time()
 
 ##=========================================================
 ##  get json  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,8 +53,8 @@ for key, val in enumerate( data['list'] ):
     ports .append( port )
 
 ## for testing purposes...
-# servers  = ['192.168.1.1', '192.168.1.2', '192,168.1.255', '8,8,8,8', 'github.com', '192.168.1.1']
-# ports  = ['30000', '30001', '30002', '30003', '30004', '30005']
+# servers  = ['192.168.1.1', '192,168.1.255', '8,8,8,8', 'github.com']
+# ports  = ['30000', '30001', '30002', '30003']
 ##=========================================================
 ##  ping 'em  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -101,10 +101,13 @@ for i in range( len(pingsorted) ):
 ##  save 'em  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 output  = open('./pinglist.txt', 'w')
-output .write('{} Minetest servers, sorted by ping speed\n'.format( len(pingsorted) ))
-output .write('https://github.com/doyousketch2/Minetest-ping-sort\n\n')
 
-print( 'your top {} servers are:\n'.format(howmany) )
+output .write('https://github.com/doyousketch2/Minetest-ping-sort\n')
+output .write( time .strftime( '%d %b %Y' ) )
+
+output .write('\n\n  {}  Minetest servers, sorted by ping speed.\n'.format( len(pingsorted) ))
+
+print( '\n\n  Your top {} servers are:\n'.format(howmany) )
 
 top = 0
 for addr in outputtext:
@@ -120,6 +123,6 @@ output .close()
 ##=========================================================
 ##  done  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-elapsed  = time() -begin
+elapsed  = time.time() -begin
 print( '\nCompleted in {:.3f} seconds.'.format(elapsed) )
-print( '\nSee pinglist.txt for sorted server response.' )
+print( '\nSee pinglist.txt for complete listing.' )
