@@ -46,7 +46,7 @@ responses  = []
 for server in servers:
 
   try:
-    ping  = Popen( ['fping', '-e', '-t', '200', server], stdout=PIPE, stderr=PIPE)
+    ping  = Popen( ['fping', '-e', '-t400', server], stdout=PIPE, stderr=PIPE)
     stdout, stderr = ping .communicate()
 
     if stdout[-12:-1] != 'unreachable':
@@ -75,7 +75,8 @@ for i in range(len(pingsorted)):
   pingsorted[i]  = pingsorted[i] .lstrip('0')
 
 output  = open('./pinglist.txt', 'w')
-output .write('{} Minetest servers, sorted by ping speed\n\n'.format( len(pingsorted) ))
+output .write('{} Minetest servers, sorted by ping speed\n'.format( len(pingsorted) ))
+output .write('https://github.com/doyousketch2/Minetest-ping-sort\n\n')
 
 print('your top 20 servers are:')
 
