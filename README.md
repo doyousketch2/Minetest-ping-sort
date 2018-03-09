@@ -19,3 +19,4 @@ YMMV.  Other factors may apply; including, but not limited to:
 - [x] How many players are online  
 - [x] How many mods are installed  
 - [x] Texture sizes  
+- [x] general lag on the 'net    
