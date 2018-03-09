@@ -1,6 +1,6 @@
 # Minetest-ping-sort  
 
-Spend a minute tofind the derver nearest you, for the fastest gaming response.  
+Spend a minute to find the server nearest you, *for the fastest gaming response.*  
 
 > sudo apt-get install fping  
 > ./pingmt.py  
