@@ -102,10 +102,10 @@ for i in range( len(pingsorted) ):
 
 output  = open('./pinglist.txt', 'w')
 
-output .write('https://github.com/doyousketch2/Minetest-ping-sort\n')
-output .write( time .strftime( '%d %b %Y' ) )
+date  = time .strftime( '%d %b %Y' )
+output .write('{}     https://github.com/doyousketch2/Minetest-ping-sort\n\n'.format( date ) )
 
-output .write('\n\n  {}  Minetest servers, sorted by ping speed.\n'.format( len(pingsorted) ))
+output .write('  {}  Minetest servers, sorted by ping speed.\n'.format( len(pingsorted) ))
 
 print( '\n\n  Your top {} servers are:\n'.format(howmany) )
 
