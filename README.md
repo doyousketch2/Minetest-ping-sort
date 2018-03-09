@@ -1,7 +1,8 @@
 # Minetest-ping-sort  
 
-The ping in-game is from the announce server.  
+The ping-meter in-game is from the announce server.  
 Doesn't reflect your speed, unless you live nearby it.  
+
 Spend a minute to find the server nearest you, *for the fastest gaming response.*  
 
 > sudo apt-get install fping  
