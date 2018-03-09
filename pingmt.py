@@ -21,24 +21,42 @@ import urllib
 import operator
 from time import time
 from subprocess import Popen, PIPE
+begin  = time()
 
 ##=========================================================
-##  script  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##  get json  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-begin  = time()
+##  how many top servers printed on commandline?
+##  read 'pinglist.txt' for the rest
+howmany  = 30
+
 
 url  = 'http://servers.minetest.net/list'
 servers  = []
+ports = []
 
 response  = urllib .urlopen(url)
 data  = json .loads( response .read() )
 
 for key, val in enumerate( data['list'] ):
   addy  = val['address']
-  if addy not in servers:
-    servers .append( addy )
+  port  = str(val['port'])
 
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  if addy in servers:
+    i = 1
+    while servers[i] != addy:
+      i += 1
+    ports[i]  = ports[i] + ', ' + port
+
+  else:
+    servers .append( addy )
+    ports .append( port )
+
+## for testing purposes...
+# servers  = ['192.168.1.1', '192.168.1.2', '192,168.1.255', '8,8,8,8', 'github.com', '192.168.1.1']
+# ports  = ['30000', '30001', '30002', '30003', '30004', '30005']
+##=========================================================
+##  ping 'em  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 print('\nPinging {} servers...\n'.format( len(servers) ))
 responses  = []
@@ -46,52 +64,61 @@ responses  = []
 for server in servers:
 
   try:
-    ping  = Popen( ['fping', '-e', '-t400', server], stdout=PIPE, stderr=PIPE)
+    ping  = Popen( ['fping', '-e', '--timeout=333', server],  stdout=PIPE,  stderr=PIPE)
     stdout, stderr = ping .communicate()
 
-    if stdout[-12:-1] != 'unreachable':
+    if stderr is not None and stdout[-12:-1] != 'unreachable' and len(stdout) > 8:
       responses .append( stdout )
-    if stdout[-6] == '.'or stdout[-7] == '.':
-      print(stdout)
+      if stdout[-7] == '.' or stdout[-8] == '.':
+        print(stdout)
 
   except:
     pass
 
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##=========================================================
+##  sort 'em  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 i = 0
 for addr in responses:
-  if addr[-6] == '.':
-    responses[i] = '00' + addr[-10:-4] + 'ms  ' + addr[:-21]
+  if addr[-8] == '.':
+    text = '00' + addr[-10:-4] + 'ms  ' + addr[:-21]
   if addr[-7] == '.':
-    responses[i] = '0' + addr[-9:-4] + 'ms  ' + addr[:-20]
+    text = '0' + addr[-9:-4] + 'ms  ' + addr[:-20]
   else:
-    responses[i] = addr[-8:-4] + 'ms  ' + addr[:-19]
+    text  = addr[-8:-4] + 'ms  ' + addr[:-19]
+  responses[i] = text
   i += 1
 
-pingsorted  = sorted( responses )
+combined  = zip(responses, ports)
+pingsorted  = sorted( combined, key=lambda x: x[0] )
 
-for i in range(len(pingsorted)):
-  pingsorted[i]  = pingsorted[i] .lstrip('0')
+outputtext = []
+for i in range( len(pingsorted) ):
+  text  = pingsorted[i][0] .lstrip('0') .lstrip('0') + '  : ' + pingsorted[i][1]
+  outputtext .append( text )
+
+##=========================================================
+##  save 'em  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 output  = open('./pinglist.txt', 'w')
 output .write('{} Minetest servers, sorted by ping speed\n'.format( len(pingsorted) ))
 output .write('https://github.com/doyousketch2/Minetest-ping-sort\n\n')
 
-print('your top 20 servers are:')
+print( 'your top {} servers are:\n'.format(howmany) )
 
 top = 0
-for addr in pingsorted:
+for addr in outputtext:
   output .write( '{}\n'.format( addr ))
 
-  if top < 20 :
+  if top < howmany :
     print( addr )
     top += 1
 
 output .write('\n')
 output .close()
 
-##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+##=========================================================
+##  done  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 elapsed  = time() -begin
 print( '\nCompleted in {:.3f} seconds.'.format(elapsed) )
