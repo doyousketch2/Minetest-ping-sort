@@ -1,4 +1,4 @@
-# Minetest-server-ping-responses  
+# Minetest-ping-sort  
 
 > sudo apt-get install fping  
 > ./pingmt.py  
