@@ -1,0 +1,141 @@
+138 Minetest servers, sorted by ping speed
+https://github.com/doyousketch2/Minetest-ping-sort
+
+32.3 ms  mine.celabs.com : 30000
+36.2 ms  jt2.intraversal.net : 30000
+38.7 ms  minetestservers.ddns.net : 48637, 30000
+38.8 ms  192.187.97.34 : 30000
+40.0 ms  69.195.136.26 : 30000
+40.1 ms  hometownserver.com : 30000
+40.3 ms  minetesthosting.com : 30000
+41.9 ms  138.197.43.193 : 30001, 30002
+41.9 ms  cooljar.mt.ds2.mytekegaming.com : 30000
+42.5 ms  hasanalsamra.tk : 4444
+42.9 ms  mt.ds2.mytekegaming.com : 30000
+43.0 ms  ctf.rubenwardy.com : 30000
+43.2 ms  genshin.ds2.myteke.net : 30000
+43.3 ms  arklegacy.duckdns.org : 39155
+43.6 ms  amun.inchra.chat : 30000
+43.6 ms  minetest.ravenchat.net : 30000
+43.8 ms  mt.ds7.mytekegaming.com : 30000
+43.9 ms  104.131.62.35 : 30000
+44.3 ms  game.ethicrush.online : 30000
+44.4 ms  158.69.114.146 : 30000
+44.5 ms  66.70.191.5 : 30003, 30000
+45.2 ms  elkien3.com : 53000, 52000, 54000
+45.3 ms  mt.ps3.mytekegaming.com : 30000
+45.5 ms  168.235.103.179 : 30000
+46.2 ms  minetest.silano-consulting.com : 30005, 30009, 30003
+46.8 ms  rhocraft.me : 30000
+47.2 ms  servers.minetest.tv : 30003
+47.4 ms  fozland.com : 30002, 30003
+48.0 ms  arcana.moe : 30000
+52.4 ms  144.217.242.123 : 30000
+52.9 ms  74.208.164.109 : 33151
+53.1 ms  survivalworks.ddns.net : 30000
+53.2 ms  minetest.elysianhome.net : 30001
+54.1 ms  nyx.no-ip.org : 30001
+56.6 ms  tsuki.pw : 30000
+57.2 ms  72.74.65.18 : 30000
+57.7 ms  n2jjnwrhmwuzzda5.lewd.pics : 30000
+68.1 ms  midnightsystems.net : 26000
+71.4 ms  anomoly.twilightparadox.com : 30000
+72.9 ms  minetest.foo-projects.org : 28000
+75.3 ms  beha.zapto.org : 30000
+80.2 ms  empiredirectory.net : 30000, 30001
+81.3 ms  pocketifiction.xyz : 30894, 30576, 30985, 31334, 30674, 31405, 31412, 31338, 31447, 31251, 31420, 31223
+81.5 ms  45.33.54.11 : 30005
+81.5 ms  minecity.online : 30000
+82.1 ms  tradewarfans.xyz : 30000, 30001
+82.6 ms  rdp.hobbyshelf.website : 30004
+83.2 ms  enrico.minecity.online : 30005
+84.3 ms  dogetest.minecity.online : 30000
+85.9 ms  sv.mnh48.com : 30000
+95.1 ms  107.184.181.242 : 30000
+113 ms  red.cat5.tv : 30006
+114 ms  minetest-france.fr : 30000, 30001
+115 ms  5.135.125.170 : 30000
+115 ms  games.firc.de : 30000, 30001
+116 ms  dl.esprc.club : 55555
+116 ms  minegame.fr : 1337
+116 ms  mt.dtar.fr : 30000
+116 ms  mt.megaf.info : 30000
+117 ms  163.172.21.9 : 30000
+117 ms  daconcepts.com : 31009, 30001, 30000, 30005, 30002
+117 ms  fractal.org.ru : 30000
+118 ms  ctf.esprc.club : 30000
+118 ms  mt2.akiba.fr : 30007, 30008
+118 ms  nyje.e-it.gr : 30001
+119 ms  zool-corp.org : 30001
+120 ms  145.239.78.1 : 30000
+121 ms  shivajiva101.nsupdate.info : 40101
+122 ms  45.32.185.166 : 30000
+122 ms  illuna.rocks : 30000
+123 ms  beerarchy.tk : 30000
+123 ms  mtg.r208.org : 30000
+124 ms  mine.outandproud.life : 30001
+125 ms  game.halberd.de : 30001, 30002
+126 ms  lgc-vpn.net : 30000
+127 ms  minetest.nwrk.biz : 30000
+127 ms  mt.rbose.org : 30003
+128 ms  axinite.taikedz.net : 30000
+128 ms  minetest.projekt-hirnfrei.de : 31001
+128 ms  survivalworld.telesight.nl : 30000
+129 ms  attack.telesight.nl : 30000
+129 ms  landofsurvivors.telesight.nl : 30000
+129 ms  naib.telesight.nl : 30002
+129 ms  technoland.telesight.nl : 30000
+130 ms  buildersworld.telesight.nl : 30000
+130 ms  fantasyworld.telesight.nl : 30000
+130 ms  minersworld.telesight.nl : 30000
+131 ms  minetest.davison.io : 30000, 30002, 30003, 30001
+132 ms  94.130.225.28 : 30000
+132 ms  nilsmumble.ddns.net : 30002
+133 ms  cloudsworld.telesight.nl : 40000
+133 ms  kristall.xyz : 30000
+135 ms  78.47.93.144 : 30000
+135 ms  94.16.121.151 : 25000
+135 ms  framinetest.org : 30000
+137 ms  188.68.37.199 : 30000
+137 ms  hard-soft.meyer-franke.com : 30088, 30001
+137 ms  krondor.neoascetic.me : 30000
+138 ms  77.23.41.143 : 31009
+140 ms  185.194.142.106 : 30003
+140 ms  85.214.118.218 : 30001
+140 ms  linuxiuvat.de : 30001
+140 ms  minetest.boolshit.de : 30000
+141 ms  131.234.130.13 : 30002, 30001
+141 ms  5.9.94.194 : 30024
+141 ms  92.26.175.98 : 30001
+141 ms  94.223.132.208 : 30394
+143 ms  jpruehmann.dnshome.de : 30007
+144 ms  librecontent.de : 30000
+146 ms  185.28.100.24 : 30000, 30001
+150 ms  joesworld.zapto.org : 30000
+150 ms  www.linux-works.de : 30001
+151 ms  84.119.58.76 : 39155
+153 ms  5.230.140.116 : 31000
+153 ms  5.230.146.43 : 31015
+156 ms  minetest.thomas-stangl.de : 30000
+158 ms  77.151.101.245 : 30000
+158 ms  84.213.45.137 : 30003
+160 ms  game.habertech.de : 30000, 30001
+162 ms  setun.net : 30005
+166 ms  78.199.90.154 : 30500, 30400
+167 ms  minetest.ttyh.ru : 30000
+167 ms  tcs.espteam.org : 30000
+170 ms  217.71.231.7 : 30000
+178 ms  84.204.209.222 : 30000, 30003, 30004
+180 ms  84.75.113.102 : 30000
+180 ms  heuschrecke.mooo.com : 30009
+185 ms  minetest.homelinux.net : 30000
+192 ms  mine.klub8bit.ru : 30000
+192 ms  minetest.servegame.com : 11802
+201 ms  91.122.197.103 : 30000
+209 ms  78.50.178.97 : 30002
+227 ms  gundul.ddnss.de : 30000
+261 ms  133.242.161.27 : 30000
+268 ms  139.59.238.211 : 30000
+296 ms  minetestserver.ddns.net : 30003, 30000, 30009
+314 ms  za.espteam.org : 30000
+321 ms  mt.thatgraemeguy.co.za : 30000
